@@ -1,0 +1,27 @@
+﻿@page "/"
+@namespace Blazor.Client.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blazor.Client</title>
+    <base href="~/" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/font-awesome/css/fontawesome.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery.min.js"></script>
+</head>
+<body>
+    <app>
+        @(await Html.RenderComponentAsync<App>(RenderMode.ServerPrerendered))
+    </app>
+
+    <script src="_framework/blazor.server.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
